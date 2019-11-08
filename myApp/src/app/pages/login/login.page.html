@@ -1,27 +1,26 @@
 <ion-header>
-    <ion-toolbar>
-        <ion-buttons slot="start">
-            <ion-menu-button></ion-menu-button>
-          </ion-buttons>
-      <ion-title>Login</ion-title>
-    </ion-toolbar>
-  </ion-header>
-  <ion-content padding>
-      <img src="/myApp/src/assets/icon/logo.png" alt="" />
-    <ion-list>
-      <ion-item>
-        <ion-label fixed>E-mail</ion-label>
-        <ion-input type="text" value="" [(ngModel)]="email"></ion-input>
-      </ion-item>
-      <ion-item>
-        <ion-label fixed>Senha</ion-label>
-        <ion-input type="password" [(ngModel)]="senha"></ion-input>
-      </ion-item>
-    </ion-list>
-  
-    <ion-button expand="full" (click)="login()">Entrar</ion-button>
-    <ion-button expand="full" (click)="goNovoUsuario()">Cadastrar</ion-button>
-    <ion-button expand="full" (click)="goNovaSenha()">Esqueci a senha</ion-button>
-  
-  </ion-content>
-  
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Login</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content padding>
+    <img src="/assets/icon/logo.png" alt="" />
+  <ion-list>
+    <ion-item>
+      <ion-label fixed>E-mail</ion-label>
+      <ion-input type="text" value="" [(ngModel)]="email"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label fixed>Senha</ion-label>
+      <ion-input type="password" [(ngModel)]="senha"></ion-input>
+    </ion-item>
+  </ion-list>
+
+  <ion-button expand="full" color="light" class="round" (click)="login()">Entrar</ion-button>
+  <ion-button expand="full" color="light" (click)="goNovoUsuario()">Cadastrar</ion-button>
+  <ion-button expand="full" color="light" (click)="goNovaSenha()">Esqueci a senha</ion-button>
+
+</ion-content>
