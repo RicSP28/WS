@@ -8,19 +8,21 @@
 </ion-header>
 <ion-content padding>
     <img src="/assets/icon/logo.png" alt="" />
+    <div style="padding-top: 50px;"></div>
   <ion-list>
     <ion-item>
-      <ion-label fixed>E-mail</ion-label>
-      <ion-input type="text" value="" [(ngModel)]="email"></ion-input>
+      <ion-label fixed color="dark">E-mail</ion-label>
+      <ion-input type="text" value="" [(ngModel)]="email"></ion-input><ion-icon name="mail" slot="end"></ion-icon>
     </ion-item>
     <ion-item>
-      <ion-label fixed>Senha</ion-label>
-      <ion-input type="password" [(ngModel)]="senha"></ion-input>
+      <ion-label fixed color="dark">Senha</ion-label>
+      <ion-input type="password" [(ngModel)]="senha"></ion-input><ion-icon name="lock" slot="end"></ion-icon>
     </ion-item>
   </ion-list>
 
-  <ion-button expand="full" color="light" class="round" (click)="login()">Entrar</ion-button>
-  <ion-button expand="full" color="light" (click)="goNovoUsuario()">Cadastrar</ion-button>
-  <ion-button expand="full" color="light" (click)="goNovaSenha()">Esqueci a senha</ion-button>
+  <ion-button expand="block" color="light" size="default" style="color: black;" (click)="login()" class="outline">Entrar</ion-button>
+  <ion-button expand="block" color="light" size="default" style="color: black;" (click)="goNovaSenha()" class="outline">Esqueci a senha</ion-button>
+
+  <p>Ainda não tem uma conta?</p> <ion-button expand="block" color="light" size="default" style="color: black;" (click)="goNovoUsuario()" class="outline">Cadastrar</ion-button>
 
 </ion-content>
