@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { MenuController } from '@ionic/angular';
 
 @Component({
   selector: 'app-home',
@@ -8,11 +9,19 @@ import { Router } from '@angular/router';
 })
 export class HomePage {
   
-  constructor(private router: Router) {}
+  constructor(private router: Router,
+    private menuCtrl: MenuController) {
+    this.menuCtrl.swipeEnable(false);
+    this.menuCtrl.enable(false);
+  }
   
 
   goLogin() {
     this.router.navigate(['/login']);
+  }
+
+  goNovoUsuario() {
+    this.router.navigate(['/cadastro-usuario']);
   }
 
 }
