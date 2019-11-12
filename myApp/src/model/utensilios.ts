@@ -1,4 +1,4 @@
-export class Produtos {
+export class Utensilios {
     id: string;
     nome: string;
     descricao: string;
@@ -6,11 +6,12 @@ export class Produtos {
     preco: string;
     imagem: string;
     
-    setProdutos(obj: any, id:any) {
+    setUtensilios(obj: any, id:any) {
         this.id = id;
         this.nome = obj.nome;
         this.descricao = obj.descricao;
         this.estoque = obj.estoque;
         this.preco = obj.preco;
+        this.imagem = obj.imagem;
 }
 }
