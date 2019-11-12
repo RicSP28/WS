@@ -13,8 +13,18 @@ export class AppComponent {
   public appPages = [
     {
       title: 'Home',
-      url: '/home',
+      url: '/home-app',
       icon: 'home'
+    },
+    {
+      title: 'Produtos',
+      url: '/produtos',
+      icon: 'nutrition'
+    },
+    {
+      title: 'Logoff',
+      url: '/logoff',
+      icon: 'log-out'
     },
     {
       title: 'Login',

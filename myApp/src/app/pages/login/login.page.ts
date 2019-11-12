@@ -31,7 +31,7 @@ export class LoginPage implements OnInit {
         localStorage.setItem("id", this.afAuth.auth.currentUser.uid);
         this.menuCtrl.swipeEnable(true);
         this.menuCtrl.enable(true);
-        this.router.navigate(['/produtos']);
+        this.router.navigate(['/home-app']);
 
       }).catch(err => {
         // Login incorreto

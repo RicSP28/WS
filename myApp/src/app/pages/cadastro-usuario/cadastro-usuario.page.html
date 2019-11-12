@@ -1,12 +1,26 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-buttons slot="start">
-      <ion-back-button></ion-back-button>
-    </ion-buttons>
-    <ion-title align="center">Cadastrar</ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content>
-
-</ion-content>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+            <ion-back-button></ion-back-button>
+        </ion-buttons>
+        <ion-title>Nova conta</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content padding>
+    <img src="/assets/icon/logo.png" alt="" />
+  
+    <ion-list>
+      <ion-item>
+        <ion-label fixed>E-mail</ion-label>
+        <ion-input type="text" value="" [(ngModel)]="email"></ion-input>
+      </ion-item>
+      <ion-item>
+          <ion-label fixed>Senha</ion-label>
+          <ion-input type="password" [(ngModel)]="senha"></ion-input>
+        </ion-item>
+    </ion-list>
+    <ion-button expand="block" color="light" size="default" style="color: black;" (click)="cadastrar()">Cadastrar</ion-button>
+  
+  </ion-content>
+  

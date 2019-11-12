@@ -3,7 +3,7 @@
     <ion-buttons slot="start">
       <ion-back-button></ion-back-button>
     </ion-buttons>
-    <ion-title align="center">Login</ion-title>
+    <ion-title>Login</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -27,7 +27,7 @@
   <ion-button expand="block" color="light" size="default" style="color: black;" (click)="goNovaSenha()" class="outline">
     Esqueci a senha</ion-button>
 
-  <p>Ainda não tem uma conta?</p>
+  <p (click)="goNovoUsuario()">Ainda não tem uma conta?</p>
   <ion-button expand="block" color="light" size="default" style="color: black;" (click)="goNovoUsuario()"
     class="outline">Cadastrar</ion-button>
 
