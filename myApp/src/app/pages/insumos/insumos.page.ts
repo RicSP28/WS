@@ -34,7 +34,7 @@ export class InsumosPage implements OnInit {
   }
 
   goPage(idValue : string){
-    this.router.navigate(['insumos-detalhe',{id : idValue}]);
+    this.router.navigate(['insumo-single',{id : idValue}]);
   }
 
 }

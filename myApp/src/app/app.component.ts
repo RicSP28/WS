@@ -25,11 +25,6 @@ export class AppComponent {
       title: 'Logoff',
       url: '/logoff',
       icon: 'log-out'
-    },
-    {
-      title: 'Login',
-      url: '/login',
-      icon: 'log-in'
     }
   ];
 

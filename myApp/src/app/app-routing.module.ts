@@ -19,6 +19,9 @@ const routes: Routes = [
   { path: 'insumos', loadChildren: './pages/insumos/insumos.module#InsumosPageModule' },
   { path: 'utensilios', loadChildren: './pages/utensilios/utensilios.module#UtensiliosPageModule' },
   { path: 'home-app', loadChildren: './pages/home-app/home-app.module#HomeAppPageModule' },  { path: 'logoff', loadChildren: './pages/logoff/logoff.module#LogoffPageModule' },
+  { path: 'insumo-single', loadChildren: './pages/insumo-single/insumo-single.module#InsumoSinglePageModule' },
+  { path: 'utensilio-single', loadChildren: './pages/utensilio-single/utensilio-single.module#UtensilioSinglePageModule' },
+  { path: 'cart', loadChildren: './pages/cart/cart.module#CartPageModule' },
 
 
 ];

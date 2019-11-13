@@ -34,7 +34,7 @@ export class UtensiliosPage implements OnInit {
   }
 
   goPage(idValue : string){
-    this.router.navigate(['utensilios-detalhe',{id : idValue}]);
+    this.router.navigate(['utensilio-single',{id : idValue}]);
   }
 
 }
