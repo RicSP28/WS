@@ -16,21 +16,7 @@ export class ProdutosPage implements OnInit {
     private router : Router) { }
 
   ngOnInit() {
-    this.db.collection('produtos').snapshotChanges().subscribe(response=>{ 
-
-      this.listaProdutos = [];
-      response.forEach(doc=>{ 
-      
-        let p = new Produtos();
-        p.setProdutos(doc.payload.doc.data(),doc.payload.doc.id);
-
-        this.listaProdutos.push(p);
-
-      },err=>{
-        console.log(err);
-      })
-
-    });
+   
   }
 
   goInsumos(){
