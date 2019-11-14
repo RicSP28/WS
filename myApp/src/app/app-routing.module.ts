@@ -22,6 +22,7 @@ const routes: Routes = [
   { path: 'insumo-single', loadChildren: './pages/insumo-single/insumo-single.module#InsumoSinglePageModule' },
   { path: 'utensilio-single', loadChildren: './pages/utensilio-single/utensilio-single.module#UtensilioSinglePageModule' },
   { path: 'cart', loadChildren: './pages/cart/cart.module#CartPageModule' },
+  { path: 'location', loadChildren: './pages/location/location.module#LocationPageModule' },
 
 
 ];

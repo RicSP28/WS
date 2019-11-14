@@ -22,6 +22,11 @@ export class AppComponent {
       icon: 'nutrition'
     },
     {
+      title: 'Localização',
+      url: '/location',
+      icon: 'pin'
+    },
+    {
       title: 'Logoff',
       url: '/logoff',
       icon: 'log-out'

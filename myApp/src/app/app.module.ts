@@ -15,6 +15,8 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { StorageService } from 'src/services/storage.service';
 import { AngularFireModule } from '@angular/fire';
 import { firebaseConfig } from 'src/environments/firebase.config';
+import { HttpClientModule } from '@angular/common/http';
+import { Geolocation } from '@ionic-native/geolocation/ngx';
 
 @NgModule({
   declarations: [AppComponent],
@@ -28,13 +30,15 @@ import { firebaseConfig } from 'src/environments/firebase.config';
     AngularFirestoreModule,
     AngularFireAuthModule,
     AngularFireStorageModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule,
   ],
   providers: [
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
     SplashScreen,
     StatusBar,
-    StorageService
+    StorageService,
+    Geolocation
   ],
   bootstrap: [AppComponent]
 })
