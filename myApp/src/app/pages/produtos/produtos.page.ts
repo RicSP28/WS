@@ -3,6 +3,7 @@ import { Produtos } from 'src/model/produtos';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { Router } from '@angular/router';
 import * as _ from 'lodash';
+import { functions } from 'firebase';
 
 @Component({
   selector: 'app-produtos',
@@ -15,7 +16,7 @@ export class ProdutosPage implements OnInit {
   allProdutos: any;
   queryText: string;
 
-  constructor() {
+  constructor(private router: Router) {
     this.queryText = "";
     this.produtos = [
       {nome: 'Insumos'},
@@ -42,11 +43,11 @@ export class ProdutosPage implements OnInit {
   }
 
   goInsumos(){
-    //this.router.navigate(['insumos']);
+    this.router.navigate(['insumos']);
   }
 
   goUtensilios(){
-   //this.router.navigate(['utensilios']);
+   this.router.navigate(['utensilios']);
   }  
 
 }

@@ -31,7 +31,7 @@ export class LocationPage implements OnInit {
 
     
 
-    /*this.geolocation.getCurrentPosition().then((resp) => {
+    this.geolocation.getCurrentPosition().then((resp) => {
 
     
       this.map = new mapboxgl.Map({
@@ -43,7 +43,7 @@ export class LocationPage implements OnInit {
 
   }).catch((error) => {
     console.log('Error getting location', error);
-  });*/
+  })
 
   }
 
