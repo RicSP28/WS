@@ -4,6 +4,7 @@ export class Produtos {
     descricao: string;
     estoque: string;
     preco: string;
+    categoria: string;
     imagem: string;
     
     setProdutos(obj: any, id:any) {
@@ -12,5 +13,7 @@ export class Produtos {
         this.descricao = obj.descricao;
         this.estoque = obj.estoque;
         this.preco = obj.preco;
+        this.categoria = obj.categoria;
+        this.imagem = obj.imagem;
 }
 }

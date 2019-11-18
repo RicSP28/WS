@@ -1,17 +1,16 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { Routes, RouterModule } from '@angular/router';
 
 import { IonicModule } from '@ionic/angular';
 
-import { HomeAppPage } from './home-app.page';
-
+import { FeedbackCadastroPage } from './feedback-cadastro.page';
 
 const routes: Routes = [
   {
     path: '',
-    component: HomeAppPage
+    component: FeedbackCadastroPage
   }
 ];
 
@@ -20,8 +19,9 @@ const routes: Routes = [
     CommonModule,
     FormsModule,
     IonicModule,
-    RouterModule.forChild(routes)
+    RouterModule.forChild(routes),
+    ReactiveFormsModule
   ],
-  declarations: [HomeAppPage]
+  declarations: [FeedbackCadastroPage]
 })
-export class HomeAppPageModule {}
+export class FeedbackCadastroPageModule {}

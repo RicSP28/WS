@@ -13,17 +13,20 @@ const routes: Routes = [
   },
   
   { path: 'login', loadChildren: './pages/login/login.module#LoginPageModule' },
-  { path: 'produtos', loadChildren: './pages/produtos/produtos.module#ProdutosPageModule' },
   { path: 'cadastro-usuario', loadChildren: './pages/cadastro-usuario/cadastro-usuario.module#CadastroUsuarioPageModule' },
   { path: 'recuperar-senha', loadChildren: './pages/recuperar-senha/recuperar-senha.module#RecuperarSenhaPageModule' },
-  { path: 'insumos', loadChildren: './pages/insumos/insumos.module#InsumosPageModule' },
-  { path: 'utensilios', loadChildren: './pages/utensilios/utensilios.module#UtensiliosPageModule' },
-  { path: 'home-app', loadChildren: './pages/home-app/home-app.module#HomeAppPageModule' },  { path: 'logoff', loadChildren: './pages/logoff/logoff.module#LogoffPageModule' },
-  { path: 'insumo-single', loadChildren: './pages/insumo-single/insumo-single.module#InsumoSinglePageModule' },
-  { path: 'utensilio-single', loadChildren: './pages/utensilio-single/utensilio-single.module#UtensilioSinglePageModule' },
+  { path: 'home-app', loadChildren: './pages/home-app/home-app.module#HomeAppPageModule' },
+  { path: 'logoff', loadChildren: './pages/logoff/logoff.module#LogoffPageModule' },
   { path: 'cart', loadChildren: './pages/cart/cart.module#CartPageModule' },
   { path: 'location', loadChildren: './pages/location/location.module#LocationPageModule' },
-
+  { path: 'produtos', loadChildren: './pages/produtos/produtos.module#ProdutosPageModule' },
+  { path: 'produto-single', loadChildren: './pages/produto-single/produto-single.module#ProdutoSinglePageModule' },
+  { path: 'contato', loadChildren: './pages/contato/contato.module#ContatoPageModule' },
+  { path: 'feedback', loadChildren: './pages/feedback/feedback.module#FeedbackPageModule' },
+  { path: 'feedback-cadastro', loadChildren: './pages/feedback-cadastro/feedback-cadastro.module#FeedbackCadastroPageModule' },
+  { path: 'feedback-detalhes', loadChildren: './pages/feedback-detalhes/feedback-detalhes.module#FeedbackDetalhesPageModule' },  { path: 'sobre', loadChildren: './pages/sobre/sobre.module#SobrePageModule' },
+  { path: 'perfil', loadChildren: './pages/perfil/perfil.module#PerfilPageModule' },
+  { path: 'privacidade', loadChildren: './pages/privacidade/privacidade.module#PrivacidadePageModule' },
 
 ];
 

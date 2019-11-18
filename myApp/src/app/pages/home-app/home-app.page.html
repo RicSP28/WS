@@ -1,5 +1,5 @@
 <ion-header translucent>
-  <ion-toolbar>
+  <ion-toolbar color="warning">
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
@@ -7,61 +7,63 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content fullscreen>
   <ion-slides fullscreen padding scroll-y="false">
     <ion-slide>
       <img src="/assets/img/default-thumb.png" alt="" />
       <h2>Insumos</h2>
-      <p>The <b>ionic conference app</b> is a practical preview of the ionic framework in action, and a demonstration of
-        proper code use.</p>
+      <p>Insumos alimentícios</p>
     </ion-slide>
 
     <ion-slide>
       <img src="/assets/img/default-thumb.png" alt="" />
       <h2>Utensílios</h2>
-      <p>The <b>ionic conference app</b> is a practical preview of the ionic framework in action, and a demonstration of
-        proper code use.</p>
+      <p>Utensílios de cozinha</p>
     </ion-slide>
 
     <ion-slide>
-      <img src="/assets/img/default-thumb.png" alt="" />
-      <h2>Produtos</h2>
-      <ion-button fill="clear" (click)="goPage()">Confira<ion-icon slot="end" name="arrow-forward"></ion-icon>
+      <!--<img src="/assets/img/default-thumb.png" alt="" />-->
+      <h2>Confira todos os produtos!</h2>
+      <ion-button fill="clear" (click)="goProdutos()">Confira<ion-icon slot="end" name="arrow-forward"></ion-icon>
       </ion-button>
     </ion-slide>
   </ion-slides>
 
   <ion-list>
       <ion-list-header>
-          <ion-label>Nossos produtos em destaque</ion-label>
-        </ion-list-header>
-    <ion-item>
-      <ion-thumbnail slot="start">
-        <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
-      </ion-thumbnail>
-      <ion-label>Item Thumbnail</ion-label>
-      <ion-icon name="arrow-forward" slot="end" (click)="goPage()"></ion-icon>
-    </ion-item>
-    </ion-list>
+        Produtos em destaque
+      </ion-list-header>
 
+      <ion-item *ngFor="let item of listaProdutos">
+        <ion-avatar slot="start" width="50%">
+          <img src="{{item.imagem}}">
+        </ion-avatar>
+        <ion-label>
+          <h2>Nome: {{item.nome}}</h2>
+          <h3>Categoria: {{item.categoria}}</h3>
+          <h3>Preço: {{item.preco | currency:'BRL'}}</h3>
+          <ion-button fill="clear" (click)="goSingle(item.id)">Confira</ion-button>
+        </ion-label>
+      </ion-item>
+    </ion-list>
 </ion-content>
 
 <ion-tabs>
-    <ion-tab-bar slot="bottom">
-      <ion-tab-button tab="#">
+    <ion-tab-bar color="dark">
+      <ion-tab-button (click)="goPerfil()">
         <ion-icon name="person"></ion-icon>
         <ion-label>Perfil</ion-label>
       </ion-tab-button>
-
-      <ion-tab-button tab="#">
+  
+      <ion-tab-button (click)="goFeed()">
         <ion-icon name="star"></ion-icon>
-        <ion-label>Classificar</ion-label>
+        <ion-label>FeedBack</ion-label>
       </ion-tab-button>
-
-      <ion-tab-button tab="#">
+  
+      <ion-tab-button (click)="goCart()">
         <ion-icon name="cart"></ion-icon>
-        <ion-label>Cart</ion-label>
-        <ion-badge>6</ion-badge>
+        <ion-label>Carrinho</ion-label>
       </ion-tab-button>
     </ion-tab-bar>
+  
   </ion-tabs>

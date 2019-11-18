@@ -1,9 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Produtos } from 'src/model/produtos';
 import { AngularFirestore } from '@angular/fire/firestore';
-import { Router } from '@angular/router';
-import * as _ from 'lodash';
-import { functions } from 'firebase';
 
 @Component({
   selector: 'app-produtos',
@@ -11,43 +9,30 @@ import { functions } from 'firebase';
   styleUrls: ['./produtos.page.scss'],
 })
 export class ProdutosPage implements OnInit {
+  listaProdutos : Produtos[] = [];
 
-  produtos: Array<{nome: string}>;
-  allProdutos: any;
-  queryText: string;
-
-  constructor(private router: Router) {
-    this.queryText = "";
-    this.produtos = [
-      {nome: 'Insumos'},
-      {nome: 'Utensílios'}
-    ];
-    this.allProdutos = this.produtos;
-   }
-
-   filterProduto(prod: any){
-     let val = prod.target.value;
-     if(val && val.trim() != ''){
-       this.produtos = _.values(this.allProdutos);
-       this.produtos = this.produtos.filter((produto) =>{
-         return(produto.nome.toLocaleLowerCase().indexOf(val.toLocaleLowerCase()) > -1);
-       })
-     } else {
-       this.produtos = this.allProdutos;
-     }
-   }
-
+  constructor(private db: AngularFirestore,
+    private router : Router) { }
 
   ngOnInit() {
-   
+    this.db.collection('produtos').snapshotChanges().subscribe(response=>{ 
+
+      this.listaProdutos = [];
+      response.forEach(doc=>{ 
+      
+        let p = new Produtos();
+        p.setProdutos(doc.payload.doc.data(),doc.payload.doc.id);
+
+        this.listaProdutos.push(p);
+
+      },err=>{
+        console.log(err);
+      })
+
+    });
   }
 
-  goInsumos(){
-    this.router.navigate(['insumos']);
+  goPage(idValue : string){
+    this.router.navigate(['produto-single',{id : idValue}]);
   }
-
-  goUtensilios(){
-   this.router.navigate(['utensilios']);
-  }  
-
 }

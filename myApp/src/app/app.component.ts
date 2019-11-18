@@ -22,6 +22,41 @@ export class AppComponent {
       icon: 'nutrition'
     },
     {
+      title: 'Feedback',
+      url: '/feedback',
+      icon: 'bookmarks'
+    },
+    {
+      title: 'Perfil',
+      url: '/perfil',
+      icon: 'person'
+    },
+    {
+      title: 'Editar Perfil',
+      url: '/perfil-detalhes',
+      icon: 'create'
+    },
+    {
+      title: 'Contato',
+      url: '/contato',
+      icon: 'paper-plane'
+    },
+    {
+      title: 'Sobre',
+      url: '/sobre',
+      icon: 'restaurant'
+    },
+    {
+      title: 'Política de privacidade',
+      url: '/privacidade',
+      icon: 'help-circle-outline'
+    },
+    {
+      title: 'Cadastrar Feedback',
+      url: '/feedback-cadastro',
+      icon: 'list'
+    },
+    {
       title: 'Localização',
       url: '/location',
       icon: 'pin'
