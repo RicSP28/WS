@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Cadastro-de-Fornecedores</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+    <form [formGroup]="formGroup"> <!-- vínculo com a variável formGroup  -->
+      <ion-list>
+        <ion-item>
+          <ion-label floating>Nome Da Empresa</ion-label>
+          <!-- formControlName -> Atributo do formgroup -->
+          <ion-input formControlName="nome da empresa" type="text"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label floating>Endereco</ion-label>
+            <ion-input formControlName="endereco" type="text"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label floating>Telefone De Contato</ion-label>
+            <ion-input formControlName="telefone de contato" type="text"></ion-input>
+        </ion-item>
+    </ion-list>
+    <ion-button expand="full" (click)="cadastrar()">Cadastrar</ion-button>
+    </form>
+
+</ion-content>
