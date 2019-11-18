@@ -74,9 +74,7 @@ export class FeedbackDetalhesPage implements OnInit {
     })
   }
 
-  voltar(){
-this.router.navigate(['feedback']);
-    };
+ 
 
   async presentToast() {
     const toast = await this.toastCtrl.create({

@@ -24,7 +24,7 @@ export class ProdutoSinglePage implements OnInit {
     private db: AngularFirestore,
     private router: Router,
     public firestorage: AngularFireStorage) { 
-      this.id = this.actRoute.snapshot.paramMap.get('id');
+    this.id = this.actRoute.snapshot.paramMap.get('id');
     }
 
   ngOnInit() {
@@ -32,12 +32,11 @@ export class ProdutoSinglePage implements OnInit {
       .doc(this.id).get().subscribe(response => {
 
         this.produtos.id = this.id;
-        //this.downloadImage();
+        this.downloadImage();
         this.produtos.nome = response.data().nome;
         this.produtos.estoque = response.data().estoque;
         this.produtos.descricao = response.data().descricao;
         this.produtos.preco = response.data().preco;
-        this.produtos.imagem = response.data().imagem;
         this.produtos.categoria = response.data().categoria;
       })
   }

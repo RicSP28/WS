@@ -22,6 +22,11 @@ export class AppComponent {
       icon: 'nutrition'
     },
     {
+      title: 'Carrinho',
+      url: '/cart',
+      icon: 'cart'
+    },
+    {
       title: 'Feedback',
       url: '/feedback',
       icon: 'bookmarks'
@@ -30,11 +35,6 @@ export class AppComponent {
       title: 'Perfil',
       url: '/perfil',
       icon: 'person'
-    },
-    {
-      title: 'Editar Perfil',
-      url: '/perfil-detalhes',
-      icon: 'create'
     },
     {
       title: 'Contato',

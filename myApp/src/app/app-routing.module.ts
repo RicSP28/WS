@@ -24,7 +24,8 @@ const routes: Routes = [
   { path: 'contato', loadChildren: './pages/contato/contato.module#ContatoPageModule' },
   { path: 'feedback', loadChildren: './pages/feedback/feedback.module#FeedbackPageModule' },
   { path: 'feedback-cadastro', loadChildren: './pages/feedback-cadastro/feedback-cadastro.module#FeedbackCadastroPageModule' },
-  { path: 'feedback-detalhes', loadChildren: './pages/feedback-detalhes/feedback-detalhes.module#FeedbackDetalhesPageModule' },  { path: 'sobre', loadChildren: './pages/sobre/sobre.module#SobrePageModule' },
+  { path: 'feedback-detalhes', loadChildren: './pages/feedback-detalhes/feedback-detalhes.module#FeedbackDetalhesPageModule' },
+  { path: 'sobre', loadChildren: './pages/sobre/sobre.module#SobrePageModule' },
   { path: 'perfil', loadChildren: './pages/perfil/perfil.module#PerfilPageModule' },
   { path: 'privacidade', loadChildren: './pages/privacidade/privacidade.module#PrivacidadePageModule' },
 
