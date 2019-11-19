@@ -1,0 +1,53 @@
+<ion-header translucent>
+  <ion-toolbar color="warning">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-icon name="search" slot="end" size="large" (click)="goProdutos()"></ion-icon>
+    <ion-title>Wooden Spoon</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen>
+  <ion-slides fullscreen padding scroll-y="false">
+    <ion-slide>
+      <img src="/assets/img/default-thumb.png" alt="" />
+      <h2>Insumos</h2>
+      <p>Insumos alimentícios</p>
+    </ion-slide>
+
+    <ion-slide>
+      <img src="/assets/img/default-thumb.png" alt="" />
+      <h2>Utensílios</h2>
+      <p>Utensílios de cozinha</p>
+    </ion-slide>
+
+    <ion-slide>
+      <!--<img src="/assets/img/default-thumb.png" alt="" />-->
+      <h2>Confira todos os produtos!</h2>
+      <ion-button fill="clear" (click)="goProdutos()">Confira<ion-icon slot="end" name="arrow-forward"></ion-icon>
+      </ion-button>
+    </ion-slide>
+  </ion-slides>
+
+</ion-content>
+
+<ion-tabs>
+    <ion-tab-bar color="dark">
+      <ion-tab-button (click)="goPerfil()">
+        <ion-icon name="person"></ion-icon>
+        <ion-label>Perfil</ion-label>
+      </ion-tab-button>
+  
+      <ion-tab-button (click)="goFeed()">
+        <ion-icon name="star"></ion-icon>
+        <ion-label>FeedBack</ion-label>
+      </ion-tab-button>
+  
+      <ion-tab-button (click)="goCart()">
+        <ion-icon name="cart"></ion-icon>
+        <ion-label>Carrinho</ion-label>
+      </ion-tab-button>
+    </ion-tab-bar>
+  
+  </ion-tabs>

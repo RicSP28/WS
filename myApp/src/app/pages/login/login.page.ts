@@ -20,6 +20,7 @@ export class LoginPage implements OnInit {
     private toastCtrl: ToastController,
     public events: Events, ) {
     this.menuCtrl.swipeEnable(false);
+    this.menuCtrl.enable(false);
   }
 
   ngOnInit() { }
@@ -29,7 +30,8 @@ export class LoginPage implements OnInit {
       this.email, this.senha).then(() => {
         localStorage.setItem("id", this.afAuth.auth.currentUser.uid);
         this.menuCtrl.swipeEnable(true);
-        this.router.navigate(['/home']);
+        this.menuCtrl.enable(true);
+        this.router.navigate(['/home-app']);
 
       }).catch(err => {
         // Login incorreto
@@ -54,4 +56,5 @@ export class LoginPage implements OnInit {
     this.router.navigate(['/recuperar-senha']);
 
   }
+
 }
